@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="numbers" aria-hidden="true">123456789</div>
+
+  <main class="game">
+    <h1>Number Guessing Game</h1>
+    <h2>Guess a number between 1 and 10</h2>
+
+    <div class="controls">
+      <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="10">
+      <button id="guessBtn">Guess</button>
+    </div>
+
+    <button id="againBtn">Again</button>
+
+    <table id="resultTable" class="hidden">
+      <thead>
+        <tr>
+          <th>Attempts</th>
+          <th>Guess Number</th>
+        </tr>
+      </thead>
+      <tbody id="resultBody"></tbody>
+    </table>
+  </main>
+
+  <!-- Pop-up (modal) -->
+  <div id="overlay" class="overlay hidden">
+    <div class="popup" role="dialog" aria-modal="true">
+      <div id="popupIcon" class="icon"></div>
+      <p id="popupMessage"></p>
+      <button id="okBtn">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
